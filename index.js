@@ -29,3 +29,6 @@ console.log("hello  " + constusers[i].name);
 
 }
 
+
+console.log ("Exercise 3: Name Lengths");
+console.log("- - - - - - - - - - - - - -");
