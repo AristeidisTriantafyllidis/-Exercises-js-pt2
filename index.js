@@ -43,3 +43,41 @@ userLength2[i] = constusers[i].name.length
 }
 console.log(userLength2);
 
+
+console.log ("Exercise 4: Add Full Name");
+console.log("- - - - - - - - - - - - - -");
+
+const ex4 = [
+  { first:"John", last:"Doe" },
+  { first:"Maria", last:"Smith" }
+];
+
+for (let i = 0; i<ex4.length; i++){
+ex4[i].fullName= ex4[i].first + " "+ ex4[i].last;
+}
+console.log(ex4);
+
+//const ex4map=ex4.map(name=>{name.fullname : ex4.first +" "+ex4.last})
+//console.log(ex4map);
+
+
+
+
+console.log ("Exercise 5: Format Prices");
+console.log("- - - - - - - - - - - - - -");
+
+const constproducts= [
+  { name:"Laptop", price:1200 },
+  { name:"Mouse", price:25 }
+];
+
+constproductsString=[];
+
+for (let i = 0; i <constproducts.length; i++){
+constproductsString[i]=constproducts[i].name +`€${constproducts[i].price}`
+}
+
+console.log(constproductsString);
+
+//const stringproducts = constproducts.map(price => `price.${price.price`)
+
