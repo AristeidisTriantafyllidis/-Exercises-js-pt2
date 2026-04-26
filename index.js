@@ -97,8 +97,36 @@ for(let i = 0; i < constusers.length; i++){
    
     constusers[i].status="Active"
   }
-  else
+  else{
     constusers[i].status="Inactive"
+  }
 }
 
+
 console.log(constusers);
+
+console.log("Exercise 7: Count Tags");
+console.log("- - - - - - - - - - - - - -");
+
+
+let constposts= [
+  { title:"Post 1", tags: ["js","web"] },
+  { title:"Post 2", tags: ["python"] }
+];
+let newConstPosts = [];
+for (let i =0; i < constposts.length; i++){
+  
+  newConstPosts[i]={
+    title: constposts[i].title,
+    tagCount:constposts[i].tags.length
+  }
+}
+
+console.log(newConstPosts);
+
+let newConstPosts2 =constposts.map(post=>({
+  title:post.title,
+  tagCount : post.tags.length
+}))
+
+console.log(newConstPosts2)
