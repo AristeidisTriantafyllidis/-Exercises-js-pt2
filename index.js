@@ -144,6 +144,25 @@ constposts= [
 constposts[0].tags = constposts[0].tags.join(",");
 console.log(constposts)
 
-const join1 = constposts.map(posts=>posts.tags.join(","))
-console.log(join1);
+//const join1 = constposts.map(post=>post.tags.join(","))
+//console.log(join1);
 
+
+console.log("Exercise 9: First Tag Only");
+console.log("- - - - - - - - - - - - - -");
+
+
+constposts= [
+  { title:"Post 1", tags: ["js","web"] },
+  { title:"Post 2", tags: [] }
+];
+
+for (let i = 0; i < constusers.length;i++){
+  constposts[i].tags.splice(1);
+    
+  }
+  
+  console.log(constposts);
+
+ const ex9=constposts.map(posts=>posts.tags.splice(1));
+ console.log(ex9);
