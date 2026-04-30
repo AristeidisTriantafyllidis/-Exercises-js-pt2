@@ -236,3 +236,22 @@ delete constusers[i].name;
 delete constusers[i].active;
 }
 console.log(constusers);
+
+console.log("Exercise 13: Build API Response");
+console.log("- - - - - - - - - - - - - -")
+
+constdata= [
+  { user:"A", actions: ["view","click"] },
+  { user:"B", actions: ["view"] }
+];
+let dataArray=[];
+for (let i = 0;i < constdata.length;i++){
+  for (let j=0;j<constdata[i].actions.length;j++){
+
+  
+dataArray.push(`${constdata[i].user}:${constdata[i].actions[j]}`)
+
+  }
+}
+
+console.log(dataArray);
