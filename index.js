@@ -213,3 +213,26 @@ const [name,domain]=constusers[i].email.split("@")
  emails[i]=domain
 }
 console.log(emails)
+
+console.log("Exercise 13: Build API Response");
+console.log("- - - - - - - - - - - - - -")
+
+
+constusers= [
+  { id:1, name:"Alex", active:true },
+  { id:2, name:"Maria", active:false }
+];
+
+for(let i = 0; i<constusers.length; i++){
+
+  if (constusers[i].active){
+    constusers[i].displayName = `${constusers[i].name} (Active)`
+
+}
+else {
+   constusers[i].displayName= `${constusers[i].name} (Inactove)`
+}
+delete constusers[i].name;
+delete constusers[i].active;
+}
+console.log(constusers);
