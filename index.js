@@ -85,20 +85,20 @@ console.log(constproductsString);
 console.log("Exercise 6: Boolean Label");
 console.log("- - - - - - - - - - - - - -");
 
-constusers= [
-  { name:"Alex", active:true },
-  { name:"Maria", active:false }
+constusers = [
+  { name: "Alex", active: true },
+  { name: "Maria", active: false }
 ];
 
-for(let i = 0; i < constusers.length; i++){
-  constusers[i].status=constusers[i].active;
-    delete constusers[i].active
-   if (constusers[i].status===true){
-   
-    constusers[i].status="Active"
+for (let i = 0; i < constusers.length; i++) {
+  constusers[i].status = constusers[i].active;
+  delete constusers[i].active
+  if (constusers[i].status === true) {
+
+    constusers[i].status = "Active"
   }
-  else{
-    constusers[i].status="Inactive"
+  else {
+    constusers[i].status = "Inactive"
   }
 }
 
@@ -109,24 +109,24 @@ console.log("Exercise 7: Count Tags");
 console.log("- - - - - - - - - - - - - -");
 
 
-let constposts= [
-  { title:"Post 1", tags: ["js","web"] },
-  { title:"Post 2", tags: ["python"] }
+let constposts = [
+  { title: "Post 1", tags: ["js", "web"] },
+  { title: "Post 2", tags: ["python"] }
 ];
 let newConstPosts = [];
-for (let i =0; i < constposts.length; i++){
-  
-  newConstPosts[i]={
+for (let i = 0; i < constposts.length; i++) {
+
+  newConstPosts[i] = {
     title: constposts[i].title,
-    tagCount:constposts[i].tags.length
+    tagCount: constposts[i].tags.length
   }
 }
 
 console.log(newConstPosts);
 
-let newConstPosts2 =constposts.map(posts=>({
-  title:posts.title,
-  tagCount :posts.tags.length
+let newConstPosts2 = constposts.map(posts => ({
+  title: posts.title,
+  tagCount: posts.tags.length
 }))
 
 console.log(newConstPosts2)
@@ -136,8 +136,8 @@ console.log(newConstPosts2)
 console.log("Exercise 8: Join Tags");
 console.log("- - - - - - - - - - - - - -");
 
-constposts= [
-  { title:"Post 1", tags: ["js","web"] }
+constposts = [
+  { title: "Post 1", tags: ["js", "web"] }
 ];
 
 
@@ -152,32 +152,50 @@ console.log("Exercise 9: First Tag Only");
 console.log("- - - - - - - - - - - - - -");
 
 
-constposts= [
-  { title:"Post 1", tags: ["js","web"] },
-  { title:"Post 2", tags: [] }
+constposts = [
+  { title: "Post 1", tags: ["js", "web"] },
+  { title: "Post 2", tags: [] }
 ];
 
-for (let i = 0; i < constusers.length;i++){
+for (let i = 0; i < constusers.length; i++) {
   constposts[i].tags.splice(1);
-    
-  }
-  
-  console.log(constposts);
 
- const ex9=constposts.map(posts=>posts=posts.tags.splice(1));
- console.log(ex9);
+}
+
+console.log(constposts);
+
+const ex9 = constposts.map(posts => posts = posts.tags.splice(1));
+console.log(ex9);
 
 
- console.log("Exercise 10: Clean Emails");
+console.log("Exercise 10: Clean Emails");
 console.log("- - - - - - - - - - - - - -");
 
-constusers= [
-  { email:"  TEST@EMAIL.COM " },
-  { email:"hello@world.com " }
+constusers = [
+  { email: "  TEST@EMAIL.COM " },
+  { email: "hello@world.com " }
 ];
 
-for(let i = 0;i<constusers.length;i++){
-constusers[i].email=constusers[i].email.trim().toLowerCase();
+for (let i = 0; i < constusers.length; i++) {
+  constusers[i].email = constusers[i].email.trim().toLowerCase();
 
 }
 console.log(constusers)
+
+
+console.log("Exercise 11: Mask Emails");
+console.log("- - - - - - - - - - - - - -");
+
+constusers= [
+  { email:"alex@gmail.com" }
+];
+let maskChar="*";
+let maskEmail=""
+
+const[name,domain]=constusers[0].email.split("@")
+
+maskEmail=name[0]+"***@" + domain
+
+console.log(maskEmail);
+
+
