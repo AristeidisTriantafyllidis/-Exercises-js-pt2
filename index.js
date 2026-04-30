@@ -237,7 +237,7 @@ delete constusers[i].active;
 }
 console.log(constusers);
 
-console.log("Exercise 13: Build API Response");
+console.log("Exercise 14: Flatten Actions");
 console.log("- - - - - - - - - - - - - -")
 
 constdata= [
