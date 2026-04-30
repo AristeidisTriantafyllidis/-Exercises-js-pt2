@@ -255,3 +255,24 @@ dataArray.push(`${constdata[i].user}:${constdata[i].actions[j]}`)
 }
 
 console.log(dataArray);
+
+console.log("Exercise 15: Total Likes Per Post");
+console.log("- - - - - - - - - - - - - -")
+
+constposts= [
+  { title:"Post 1", likes: [10,20,30] },
+  { title:"Post 2", likes: [5,5] }
+];
+
+let counter=0;
+
+for(let i= 0; i < constposts.length;i++){
+  let counter=0;
+  for(let j=0; j <constposts[i].likes.length;j++){
+counter += constposts[i].likes[j]
+
+  }
+  constposts[i].totalLikes=counter
+  delete constposts[i].likes
+}
+console.log(constposts);
