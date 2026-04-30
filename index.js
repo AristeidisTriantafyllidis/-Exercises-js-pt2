@@ -198,4 +198,18 @@ maskEmail=name[0]+"***@" + domain
 
 console.log(maskEmail);
 
+console.log("Exercise 12: Extract Domains");
+console.log("- - - - - - - - - - - - - -")
 
+
+constusers= [
+  { email:"alex@gmail.com" },
+  { email:"maria@yahoo.com" }
+  ];
+
+  let emails=[];
+for(let i = 0; i < constusers.length;i++){
+const [name,domain]=constusers[i].email.split("@")
+ emails[i]=domain
+}
+console.log(emails)
