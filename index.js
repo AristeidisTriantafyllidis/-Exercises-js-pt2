@@ -164,5 +164,20 @@ for (let i = 0; i < constusers.length;i++){
   
   console.log(constposts);
 
- const ex9=constposts.map(posts=>posts.tags.splice(1));
+ const ex9=constposts.map(posts=>posts=posts.tags.splice(1));
  console.log(ex9);
+
+
+ console.log("Exercise 10: Clean Emails");
+console.log("- - - - - - - - - - - - - -");
+
+constusers= [
+  { email:"  TEST@EMAIL.COM " },
+  { email:"hello@world.com " }
+];
+
+for(let i = 0;i<constusers.length;i++){
+constusers[i].email=constusers[i].email.trim().toLowerCase();
+
+}
+console.log(constusers)
