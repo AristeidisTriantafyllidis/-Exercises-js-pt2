@@ -124,9 +124,26 @@ for (let i =0; i < constposts.length; i++){
 
 console.log(newConstPosts);
 
-let newConstPosts2 =constposts.map(post=>({
-  title:post.title,
-  tagCount : post.tags.length
+let newConstPosts2 =constposts.map(posts=>({
+  title:posts.title,
+  tagCount :posts.tags.length
 }))
 
 console.log(newConstPosts2)
+
+
+
+console.log("Exercise 8: Join Tags");
+console.log("- - - - - - - - - - - - - -");
+
+constposts= [
+  { title:"Post 1", tags: ["js","web"] }
+];
+
+
+constposts[0].tags = constposts[0].tags.join(",");
+console.log(constposts)
+
+const join1 = constposts.map(posts=>posts.tags.join(","))
+console.log(join1);
+
